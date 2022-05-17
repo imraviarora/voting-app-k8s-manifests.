@@ -23,7 +23,7 @@ spec:
   ingressClassName: my-aws-ingress-class 
   defaultBackend:
     service:
-      name: vote
+      name: vote-nodeport-svc
       port:
         number: 80     
   rules:
@@ -34,7 +34,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: vote-service
+                name: vote-nodeport-svc
                 port: 
                   number: 80
     - host: voteresult.vetifly.com
@@ -44,6 +44,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: result-service
+                name: result-nodeport-svc
                 port: 
                   number: 80

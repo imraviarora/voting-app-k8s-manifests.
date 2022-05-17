@@ -20,7 +20,7 @@ metadata:
     # External DNS - For creating a Record Set in Route53
     external-dns.alpha.kubernetes.io/hostname: defaultvapps.vetifly.com 
 spec:
-  ingressClassName: vote-aws-ingress-class                  
+  ingressClassName: my-aws-ingress-class 
   defaultBackend:
     service:
       name: vote
